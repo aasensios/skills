@@ -15,7 +15,7 @@ ln -s ~/dev/skills/improve ~/.claude/skills/improve
 ### Use
 
 ```
-/improve [areas...] [path] [--runtime]
+/improve [areas...] [path] [--runtime] [--report [file]]
 ```
 
 | Area | Aliases | Covers |
@@ -38,7 +38,7 @@ No area means all seven. A path narrows the run to a package in a monorepo: the 
 
 ### Output
 
-`improve-report.md` at the audited root, replaced on every run and never committed by the skill. It opens with a stack detection table and a verdict table, then one section per area with up to five ranked findings, each carrying an ID (`DEP-1`, `A11Y-2`), impact, effort, evidence, why, and one suggestion. Every area lists what was checked and what was not, so a `Good` is auditable. The chat shows a one-line stack summary, the verdict table, the top three findings, whether a previous report was replaced, and whether `.gitignore` covers the report.
+The report is printed in chat and nothing is written into the repository. It opens with a one-line stack summary, the verdict table and the top three findings, then the stack detection table and one section per area with up to five ranked findings, each carrying an ID (`DEP-1`, `A11Y-2`), impact, effort, evidence, why, and one suggestion. Every area lists what was checked and what was not, so a `Good` is auditable. Add `--report` to also save the same text to a file, by default under `~/.improve/`, or `--report path/to/file.md` for a place of your choosing.
 
 ### Layout
 
