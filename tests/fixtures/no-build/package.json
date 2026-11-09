@@ -1,0 +1,6 @@
+{
+  "name": "no-build-fixture",
+  "private": true,
+  "scripts": { "lint": "echo ok" },
+  "devDependencies": {}
+}

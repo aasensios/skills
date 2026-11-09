@@ -1,0 +1,6 @@
+{
+  "name": "hanging-script-fixture",
+  "private": true,
+  "scripts": { "lint": "sleep 300" },
+  "devDependencies": {}
+}

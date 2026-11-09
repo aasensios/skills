@@ -28,7 +28,7 @@ ln -s ~/dev/skills/improve ~/.claude/skills/improve
 | `internationalization` | `i18n`, `l10n` | `Intl` usage, centralised strings, logical CSS, `lang` and `dir`, locale routing; translation completeness when a locale setup exists |
 | `security` | `sec` | secrets in the tree, known vulnerabilities, supply chain delay, CSP and headers, XSS sinks, token storage, third-party origins, action pinning |
 
-No area means all seven. A path narrows the run to a package in a monorepo. Area names win over same-named folders; `./name` forces a path.
+No area means all seven. A path narrows the run to a package in a monorepo: the report lands there, and the four package-level areas audit only that package, while `dependencies`, `ci` and `security` always include the repository root too. Area names win over same-named folders; `./name` forces a path.
 
 ### Depth
 
@@ -38,7 +38,7 @@ No area means all seven. A path narrows the run to a package in a monorepo. Area
 
 ### Output
 
-`improve-report.md` at the audited root, replaced on every run and never committed by the skill. It opens with a stack detection table and a verdict table, then one section per area with up to five ranked findings, each carrying an ID (`DEP-1`, `A11Y-2`), impact, effort, evidence, why, and one suggestion. Every area lists what was checked and what was not, so a `Good` is auditable.
+`improve-report.md` at the audited root, replaced on every run and never committed by the skill. It opens with a stack detection table and a verdict table, then one section per area with up to five ranked findings, each carrying an ID (`DEP-1`, `A11Y-2`), impact, effort, evidence, why, and one suggestion. Every area lists what was checked and what was not, so a `Good` is auditable. The chat shows a one-line stack summary, the verdict table, the top three findings, whether a previous report was replaced, and whether `.gitignore` covers the report.
 
 ### Layout
 

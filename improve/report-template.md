@@ -1,16 +1,16 @@
 # Improve report
 
-<repo name> · <YYYY-MM-DD> · Areas: <list or "all"> · Tiers: <1, 2, 3 or "1, 2">
+<repo name> · <YYYY-MM-DD> · Areas: <list or "all"> · Tiers: <"1", "1, 2" or "1, 2, 3">
 
 ## Stack
 
 | Aspect | Detected | Evidence |
 |---|---|---|
 | Framework | <name and version, or "none found"> | <file> |
-| Package manager | <name, lockfile> | <file> |
+| Package manager | <name, lockfile; on a mismatch "pin: npm@x; lockfile: pnpm"> | <file> |
 | Runtime | <version source, or "none pinned"> | <file> |
 | CI | <providers, or "none found"> | <files> |
-| Tests | <runner, or "none found"> | <file> |
+| Tests | <runner and test file glob, or "none found"> | <file> |
 | Lint and format | <tools, or "none found"> | <files> |
 | i18n | <library, or "none found"> | <file> |
 | Deploy | <hints, or "none found"> | <file> |
@@ -32,6 +32,6 @@ Why: <one or two sentences>
 Suggestion: <one tool or technique, and the one-line change>
 
 Checked: <item numbers and names performed>
-Not checked: <item numbers with reason: needs --runtime, command failed, command timed out, not applicable>
+Not checked: <item numbers, each with one reason: needs --runtime, not applicable (say why), no node_modules, command failed, command timed out, script writes files, no build script, build output not ignored>
 Skipped as documented choices: <suppressed suggestions, each with the document that states the choice, or "none">
-Notes: <low impact items under a Good verdict, or "none">
+Notes: <findings beyond the cap, one line each with evidence; low impact items under a Good verdict; or "none">

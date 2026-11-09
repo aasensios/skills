@@ -1,0 +1,6 @@
+{
+  "name": "lockfile-conflict-fixture",
+  "private": true,
+  "packageManager": "npm@10.9.0",
+  "devDependencies": { "typescript": "6.0.3" }
+}
