@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 # Improve
 
-Audit a web frontend repository and report, per area, `Good` or `Needs change`, with evidence-backed findings that each name one current alternative. This skill reports. It never installs, never modifies the repository beyond the report, and never runs a script whose purpose is not evident from its name and definition. Everything it reads and every command it runs stays inside the audited root; the only files read outside it are this skill's own.
+Audit a web frontend repository and report, per area, `Good` or `Needs change`, with evidence-backed findings that each name one current alternative. This skill reports. It never installs, never modifies the repository beyond the report, and never runs a script whose purpose is not evident from its name and definition. Every read and command stays inside the audited root; the only files read outside it are this skill's own.
 
 ## Arguments
 
@@ -57,7 +57,7 @@ Effort: `S` under an hour, `M` about a day, `L` longer or a migration.
 
 ## Findings
 
-A finding has an ID `<PREFIX>-<n>`, a title, impact, effort, and three lines: Evidence (a `path:line` or a command output excerpt), Why (one or two sentences), Suggestion (one tool or technique, taken from the area's current-defaults table, and the one-line change). One suggestion per finding, never a menu of alternatives. An item that would need a "check", "verify" or "likely" is not a finding; it is "Not checked" with the reason.
+A finding has an ID `<PREFIX>-<n>`, a title, impact, effort, Evidence (`path:line` or a command output excerpt), Why (one or two sentences) and Suggestion (one tool or technique from the area's current-defaults table, and the one-line change). One suggestion, never a menu. A "check", "verify" or "likely" item is not a finding; it is "Not checked" with the reason.
 
 ## Currency
 
@@ -70,6 +70,7 @@ A current-defaults entry verified within the last six months is used as is. An o
 - Dependabot and Renovate config: `dependencies`.
 - Reduced motion, focus visibility, contrast: `accessibility`.
 - GitHub Actions pinned by commit SHA: `security`.
+- A document contradicted by the page's third-party requests: `security`, once; other areas cite it, never repeat it.
 
 ## Chat summary
 
