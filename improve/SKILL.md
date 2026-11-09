@@ -41,7 +41,7 @@ Audit a web frontend repository and report, per area, `Good` or `Needs change`, 
 3. **Scope.** In a monorepo with no path: run `dependencies`, `ci` and `security` at the root. When more than one app-like package exists, ask once which one gets the other areas, before any audit. This is the only question the run may ask.
 4. **Run the tiers**: 1 and 2, and 3 when enabled.
 5. **Audit each area.** Load `areas/<area>.md` and work its numbered items in order. Record every item as checked, "Not checked: <reason>" or "Not checked: not applicable".
-6. **Rank and cap.** At most five findings per area, ordered by impact then effort. Drop any finding without an evidence line. Drop suggestions suppressed in step 1 and list them under "Skipped as documented choices".
+6. **Rank and cap.** At most five findings per area, ordered by impact then effort. Drop any finding without an evidence line. Drop suggestions suppressed in step 1 and list them under "Skipped as documented choices". Findings beyond the cap go in one line each under Notes, with their evidence.
 7. **Verdict.** `Needs change` when a `medium` or `high` finding remains. `Good` otherwise, with `low` findings under Notes. There is no third verdict: an area that does not apply is `Good` with its items under "Not checked: not applicable".
 8. **Report.** Write `improve-report.md` from `report-template.md` at the audited root, replacing any existing one. Then print the chat summary.
 
