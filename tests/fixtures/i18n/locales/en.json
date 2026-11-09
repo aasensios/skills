@@ -1,0 +1,6 @@
+{
+  "title": "Welcome",
+  "greeting": "Hello, {{name}}",
+  "items": "{{count}} items",
+  "logout": "Log out"
+}

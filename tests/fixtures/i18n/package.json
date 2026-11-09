@@ -1,0 +1,6 @@
+{
+  "name": "i18n-fixture",
+  "private": true,
+  "type": "module",
+  "dependencies": { "i18next": "25.0.0" }
+}

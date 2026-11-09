@@ -1,0 +1,6 @@
+{
+  "name": "@fixture/ui",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": { "build": "echo build ui" }
+}

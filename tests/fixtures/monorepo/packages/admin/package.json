@@ -1,0 +1,7 @@
+{
+  "name": "@fixture/admin",
+  "private": true,
+  "scripts": { "dev": "vite", "build": "vite build" },
+  "dependencies": { "@fixture/ui": "workspace:*" },
+  "devDependencies": { "vite": "8.1.0" }
+}

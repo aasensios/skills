@@ -38,7 +38,7 @@ Audit a web frontend repository and report, per area, `Good` or `Needs change`, 
 
 1. **Orient.** Read README, AGENTS.md, CLAUDE.md and CONTRIBUTING when present. Record each stated deliberate choice. A choice suppresses only the suggestions that contradict it, never an area. A contradiction between what the documents claim and what the code does is a finding, not a suppression. `security` findings are never suppressed; one caused by a documented choice cites the document.
 2. **Detect the stack** and print the Stack table from `report-template.md` before any finding. "none found" is a valid cell.
-3. **Scope.** In a monorepo with no path: run `dependencies`, `ci` and `security` at the root. When more than one app-like package exists, ask once which one gets the other areas, before any audit. This is the only question the run may ask.
+3. **Scope.** In a workspace, `dependencies`, `ci` and `security` always include the workspace root; the other four areas run on one package. With no path and more than one app-like package, ask once which package, before any audit. This is the only question the run may ask.
 4. **Run the tiers**: 1 and 2, and 3 when enabled.
 5. **Audit each area.** Load `areas/<area>.md` and work its numbered items in order. Record every item as checked, "Not checked: <reason>" or "Not checked: not applicable".
 6. **Rank and cap.** At most five findings per area, ordered by impact then effort. Drop any finding without an evidence line. Drop suggestions suppressed in step 1 and list them under "Skipped as documented choices". Findings beyond the cap go in one line each under Notes, with their evidence.
